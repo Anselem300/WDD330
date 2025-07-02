@@ -7,7 +7,14 @@ export function qs(selector, parent = document) {
 
 // retrieve data from localstorage
 export function getLocalStorage(key) {
-  return JSON.parse(localStorage.getItem(key));
+  const data = localStorage.getItem(key);
+
+  try {
+    return JSON.parse(data); // <-- this must return an array or null
+  }
+  catch (error) {
+    return []; // <-- this must return an array or null
+  }
 }
 // save data to local storage
 export function setLocalStorage(key, data) {
