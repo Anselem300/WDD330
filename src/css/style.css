@@ -261,3 +261,10 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+.product-card_discount {
+  color: #e63946;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
