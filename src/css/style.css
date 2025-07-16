@@ -268,3 +268,19 @@ footer {
   font-size: 0.9rem;
   margin-top: 0.25rem;
 }
+
+.image-card {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.image-card figure {
+  text-align: center;
+}
+
+.image-card figcaption {
+  text-align: center;
+  font-weight: bold;
+}
