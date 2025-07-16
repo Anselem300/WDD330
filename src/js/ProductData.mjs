@@ -1,3 +1,5 @@
+const baseURL = import.meta.env.VITE_SERVER_URL
+
 function convertToJson(res) {
   if (res.ok) {
     return res.json();
@@ -7,14 +9,20 @@ function convertToJson(res) {
 }
 
 export default class ProductData {
-  constructor(category) {
-    this.category = category;
-    this.path = `../json/${this.category}.json`;
+  constructor() {
+    
   }
-  getData() {
-    return fetch(this.path)
-      .then(convertToJson)
-      .then((data) => data);
+  async getData(category) {
+    try{
+      const response = await fetch(`${baseURL}products/search/${category}`)
+      if (!response.ok){
+        throw new Error('HTTP Error status: ' + response.status);
+      }
+    const data = await convertToJson(response);
+    return data.Result;
+    } catch(error){
+      console.error(`Error fetching data: ${error}`);
+    }
   }
   async findProductById(id) {
     const products = await this.getData();
@@ -60,7 +68,7 @@ export class ProductList {
 
   async init() {
     // the dataSource will return a Promise...so you can use await to resolve it.
-    const list = await this.dataSource.getData();
+    const list = await this.dataSource.getData(this.category);
     // next, render the list – ** future **
     this.renderList(list);
   }

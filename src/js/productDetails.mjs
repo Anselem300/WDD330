@@ -9,7 +9,7 @@ export default class ProductDetails {
 
     async init(){
         // use the datasource to get the details for the current product. findProductById will return a promise! use await or .then() to process it
-        this.product = await this.dataSource.findProductById(this.productId);
+        this.product = await this.dataSource.findProductById(`${baseURL}product/${id}`);
         this.renderProductDetails(this.product);
         // the product details are needed before rendering the HTML
         this.renderProductDetails();
