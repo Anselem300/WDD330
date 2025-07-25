@@ -148,3 +148,11 @@ function productDeatailsTemplate(product){
 //       <button id="addToCart" data-id="${product.Id}">Add to Cart</button>
 //     </div></section>`;
 // }
+
+// export default class ExternalServices {
+//   processOrder(data) {
+//     console.log("Order received:", data);
+//     // Here you could send it to an API or simulate it with localStorage
+//     // Example: fetch('/api/submit-order', { method: 'POST', body: JSON.stringify(data) })
+//   }
+// }

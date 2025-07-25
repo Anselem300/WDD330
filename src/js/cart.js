@@ -4,7 +4,13 @@ import { loadHeaderFooter } from "./utils.mjs";
 loadHeaderFooter();
 
 function renderCartContents() {
-  const cartItems = getLocalStorage("so-cart");
+  const cartItems = getLocalStorage("so-cart") || []; // fallback to empty array
+  if (cartItems.length === 0) {
+    document.querySelector(".product-list").innerHTML =
+      "<p>Your cart is empty.</p>";
+    return;
+  }
+
   const htmlItems = cartItems.map((item) => cartItemTemplate(item));
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
 }
@@ -30,8 +36,8 @@ function cartItemTemplate(item) {
 renderCartContents();
 
 const totalPriceCard = document.querySelector(".final-price");
-const totalPrice = document.createElement('p');
-const productPrice = `<strong>Total Product Price: </strong>$${((349.99 * 4) + 199.9).toFixed(2)}`;
+const totalPrice = document.createElement("p");
+const productPrice = `<strong>Total Product Price: </strong>$${(349.99 * 4 + 199.9).toFixed(2)}`;
 totalPrice.innerHTML = productPrice;
 
 totalPriceCard.appendChild(totalPrice);

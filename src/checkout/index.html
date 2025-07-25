@@ -13,15 +13,13 @@
   </head>
 
   <body>
-    <header class="divider" id="main-header">
-    </header>
+    <header class="divider" id="main-header"></header>
 
     <main class="divider">
       <section class="products">
         <h2>Review & Place your Order</h2>
       </section>
       <div class="review-container">
-
         <!-- Order Summary -->
         <div class="summary-section">
           <h4>Your Order Summary</h4>
@@ -35,45 +33,67 @@
             <span><strong>Shipping: </strong>$<span id="shipping"></span></span>
           </div>
           <div class="summary-line Total">
-            <span><strong>Sum Total: </strong>$<span id="sum-total"></span></span>
+            <span
+              ><strong>Sum Total: </strong>$<span id="sum-total"></span
+            ></span>
           </div>
         </div>
       </div>
       <form id="checkout">
         <!-- Customer First and Last Name -->
-        <label for="firstname">First Name</label>
-        <input type="text" id="firstname" name="firstname" required>
+        <label for="fname">First Name</label>
+        <input type="text" id="firstname" name="firstname" required />
 
-        <label for="lastname">Last Name</label>
-        <input type="text" id="lastname" name="lastname" required>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" required />
 
         <!-- Customer Address -->
         <label for="street">Street Address</label>
-        <input type="text" id="street" name="street" required>
+        <input type="text" id="street" name="street" required />
 
         <label for="city">City</label>
-        <input type="text" id="city" name="city" required>
+        <input type="text" id="city" name="city" required />
 
         <label for="state">State</label>
-        <input type="text" id="state" name="state" required>
+        <input type="text" id="state" name="state" required />
 
         <label for="zip">Zip Code</label>
-        <input type="text" id="zip" name="zip" pattern="[0-9]{5}" required placeholder="e.g. 12345">
+        <input
+          type="text"
+          id="zip"
+          name="zip"
+          pattern="[0-9]{5}"
+          required
+          placeholder="e.g. 12345"
+        />
 
         <!-- Payment -->
         <label for="cardNumber">Credit Card Number</label>
-        <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9]{13,16}" required placeholder="e.g. 4111111111111111">
+        <input
+          type="text"
+          id="cardNumber"
+          name="cardNumber"
+          pattern="[0-9]{13,16}"
+          required
+          placeholder="e.g. 4111111111111111"
+        />
 
-        <label for="expDate">Expiration Date</label>
-        <input type="month" id="expDate" name="expDate" required>
+        <label for="expiration">Expiration Date</label>
+        <input type="month" id="expDate" name="expiration" required />
 
         <label for="securityCode">Security Code (CVV)</label>
-        <input type="text" id="securityCode" name="securityCode" pattern="[0-9]{3,4}" required placeholder="e.g. 123">
+        <input
+          type="text"
+          id="securityCode"
+          name="securityCode"
+          pattern="[0-9]{3,4}"
+          required
+          placeholder="e.g. 123"
+        />
 
         <!-- Submit -->
         <button type="submit" class="checkout-btn">Pay Now</button>
       </form>
-
     </main>
 
     <footer id="main-footer"></footer>

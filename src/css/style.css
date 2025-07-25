@@ -291,7 +291,7 @@ footer {
   width: 300px;
   margin: 1rem auto;
   color: white;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: 0 0 5px gray;
 }
 
@@ -301,52 +301,52 @@ footer {
   & a {
     text-decoration: none;
     background-color: #525b0f;
-    padding: .5rem 1rem;
-    border-radius: .4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
     color: white;
     &:hover {
-    background-color: #303030;
-     }
+      background-color: #303030;
+    }
   }
 }
 
 form {
-      max-width: 500px;
-      margin: auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1.1rem;
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.1rem;
 }
 
 label {
-      display: block;
-      margin-top: 1rem;
-      font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
 }
 
 input {
-      width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.25rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .checkout-btn {
-      margin-top: 1.5rem;
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 0.75rem;
-      width: 100%;
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      &:hover{
-        background-color: #218838;
-      }
+  margin-top: 1.5rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: #218838;
+  }
 }
 
 .review-container {
