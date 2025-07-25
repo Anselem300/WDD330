@@ -23,9 +23,15 @@ function cartItemTemplate(item) {
   <p class="cart-card__color">${item.Colors[0].ColorName}</p>
   <p class="cart-card__quantity">qty: 1</p>
   <p class="cart-card__price">$${item.FinalPrice}</p>
-</li>`;
-
+  </li>`;
   return newItem;
 }
 
 renderCartContents();
+
+const totalPriceCard = document.querySelector(".final-price");
+const totalPrice = document.createElement('p');
+const productPrice = `<strong>Total Product Price: </strong>$${((349.99 * 4) + 199.9).toFixed(2)}`;
+totalPrice.innerHTML = productPrice;
+
+totalPriceCard.appendChild(totalPrice);
