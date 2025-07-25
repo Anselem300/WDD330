@@ -381,3 +381,17 @@ input {
   font-size: 1.1rem;
   font-weight: bold;
 }
+.sign-up h5 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: large;
+}
+
+#email {
+  font-size: 1rem;
+}
+
+#newsletter-btn {
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
